@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="oakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DE9B53"/>
+      <stop offset="50%" stop-color="#C6813D"/>
+      <stop offset="100%" stop-color="#8F531B"/>
+    </linearGradient>
+    <linearGradient id="darkOak" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#322C28"/>
+      <stop offset="100%" stop-color="#1D1917"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#1D1917" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background rounded canvas -->
+  <rect width="64" height="64" rx="14" fill="#1D1917"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#C6813D" stroke-width="1.2" stroke-opacity="0.4"/>
+
+  <!-- Herringbone (Fischgrät) Parquet Planks -->
+  <g transform="translate(6, 6)" filter="url(#shadow)">
+    <!-- Plank 1 (Left chevron arm) -->
+    <path d="M12 36 L26 22 L36 32 L22 46 Z" fill="url(#oakGrad)"/>
+    <!-- Plank 2 (Right chevron arm interlocking) -->
+    <path d="M26 22 L40 8 L50 18 L36 32 Z" fill="#E8A962"/>
+    <!-- Plank 3 (Lower counterpoint) -->
+    <path d="M2 26 L16 12 L26 22 L12 36 Z" fill="url(#darkOak)" stroke="#C6813D" stroke-width="0.8" stroke-opacity="0.6"/>
+    <!-- Plank 4 (Bottom interlocking) -->
+    <path d="M22 46 L36 32 L46 42 L32 56 Z" fill="url(#oakGrad)"/>
+    
+    <!-- Precision joint lines (Schattenfuge) -->
+    <line x1="26" y1="22" x2="36" y2="32" stroke="#1D1917" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="12" y1="36" x2="22" y2="46" stroke="#1D1917" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

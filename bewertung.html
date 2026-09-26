@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bewertungs-Tool – Bodenpark Engelhardt</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="bewertung-container">
+    <div class="bewertung-card">
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:var(--sp-4)">
+        <a href="/" style="text-decoration:none;color:var(--sc-accent);font-weight:600;font-size:0.875rem">
+          &larr; Zurück zur Website
+        </a>
+      </div>
+
+      <h1>Kundenbewertung anfordern</h1>
+      <p class="bewertung-subtitle">
+        Internes Meister-Werkzeug: Nach einem abgeschlossenen Verlege- oder Restaurierungsauftrag in Sekunden eine personalisierte Bewertungsanfrage per WhatsApp an den Kunden versenden.
+      </p>
+
+      <form id="bewertungForm">
+        <div class="form-field">
+          <label for="bKundenname">Kundenname *</label>
+          <input type="text" id="bKundenname" name="kundenname" class="form-input"
+                 placeholder="z. B. Herr Weber" required autocomplete="name">
+        </div>
+
+        <div class="form-field" style="margin-top:var(--sp-4)">
+          <label for="bTelefon">Handynummer des Kunden *</label>
+          <input type="tel" id="bTelefon" name="telefon" class="form-input"
+                 placeholder="0170 1234567" required autocomplete="tel" inputmode="tel">
+          <small style="color:var(--sc-ink-muted);font-size:.8125rem;margin-top:.25rem;display:block">
+            Formate werden automatisch erkannt (0170, +49170, 0841...)
+          </small>
+        </div>
+
+        <div style="margin-top:var(--sp-6)">
+          <button type="submit" class="btn-cta" style="width:100%">
+            WhatsApp-Bewertungslink generieren
+          </button>
+        </div>
+      </form>
+
+      <!-- Ergebnis-Bereich -->
+      <div id="bewertungResult" class="bewertung-result">
+        <p style="font-weight:600;color:var(--sc-ink);margin:0 0 var(--sp-3)">
+          Ihre personalisierte Meister-Nachricht ist bereit:
+        </p>
+        <div class="bewertung-actions">
+          <a id="bewertungWaLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-cta">
+            In WhatsApp öffnen
+          </a>
+          <button type="button" id="bewertungCopyBtn" class="btn-secondary">
+            Link kopieren
+          </button>
+        </div>
+      </div>
+
+      <!-- DSGVO-Hinweis -->
+      <div class="bewertung-dsgvo">
+        🔒 Datenschutz: Kundenname und Telefonnummer werden ausschließlich lokal in Ihrem Browser zur Erzeugung des WhatsApp-Links verarbeitet. Es erfolgt keine Speicherung auf einem Server.
+      </div>
+    </div>
+  </main>
+  <script src="assets/js/bewertung.js" defer></script>
+</body>
+</html>
